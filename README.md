@@ -63,6 +63,7 @@ require('loc-tracker').setup({
 ### Commands
 - `:LocStatus` - Shows your current progress for today.
 - `:LocGoal <number>` - Temporarily updates your goal for the day (e.g., `:LocGoal 200`).
+- `:LocHeatmap` - Opens a beautiful GitHub-style floating window showing your coding activity over the past 25 weeks!
 
 ### Statusline Integration
 
@@ -79,6 +80,16 @@ require('lualine').setup {
     }
   }
 }
+```
+
+## 🎨 Highlighting (Heatmap)
+By default, the heatmap uses standard GitHub dark mode colors. If you want to customize them to match your theme, simply override these highlight groups in your config:
+```lua
+vim.api.nvim_set_hl(0, "LocTrackerLevel0", { fg = "#2d333b" }) -- Empty
+vim.api.nvim_set_hl(0, "LocTrackerLevel1", { fg = "#0e4429" }) -- Low
+vim.api.nvim_set_hl(0, "LocTrackerLevel2", { fg = "#006d32" }) -- Medium
+vim.api.nvim_set_hl(0, "LocTrackerLevel3", { fg = "#26a641" }) -- High
+vim.api.nvim_set_hl(0, "LocTrackerLevel4", { fg = "#39d353" }) -- Very High
 ```
 
 ## 📝 Data Storage

@@ -17,3 +17,7 @@ vim.api.nvim_create_user_command("LocGoal", function(opts)
     end
     loc.set_goal(goal)
 end, { nargs = 1, desc = "Set daily LOC goal" })
+
+vim.api.nvim_create_user_command("LocHeatmap", function()
+    require("loc-tracker.heatmap").show_heatmap()
+end, { desc = "Show GitHub-style LOC heatmap" })
