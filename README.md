@@ -14,7 +14,7 @@ Install with your favorite package manager.
 
 **[lazy.nvim](https://github.com/folke/lazy.nvim):**
 ```lua
-{
+return {
     "matheusmurkdock/loc-tracker.nvim",
     config = function()
         require("loc-tracker").setup({
