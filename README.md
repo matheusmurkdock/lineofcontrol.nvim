@@ -1,5 +1,4 @@
 # 📈 loc-tracker.nvim
-
 A lightweight Neovim plugin that tracks your lines of code (LOC) written each day and helps you achieve your daily coding goals. It operates entirely locally and uses Neovim's native buffer events to accurately record line additions and deletions in real-time.
 
 ## ✨ Features
@@ -9,7 +8,7 @@ A lightweight Neovim plugin that tracks your lines of code (LOC) written each da
 - Exposes a `statusline` function to easily display progress in `lualine.nvim` or any other statusline plugin.
 - Ignores non-code buffers like terminal, NvimTree, Telescope, etc.
 
-## 📦 Installation
+## Installation
 
 Install with your favorite package manager.
 
@@ -35,7 +34,7 @@ use {
 }
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 The `setup` function accepts an optional table for configuration. Here are the defaults:
 
@@ -45,20 +44,20 @@ require('loc-tracker').setup({
     -- Path to save the JSON file (defaults to ~/.local/share/nvim/loc-tracker.json)
     data_file = vim.fn.stdpath("data") .. "/loc-tracker.json",
     -- Filetypes to ignore when tracking lines
-    ignore_filetypes = { 
-        "NvimTree", 
-        "TelescopePrompt", 
-        "nofile", 
-        "terminal", 
-        "help", 
-        "lazy", 
+    ignore_filetypes = {
+        "NvimTree",
+        "TelescopePrompt",
+        "nofile",
+        "terminal",
+        "help",
+        "lazy",
         "mason",
         "netrw"
     },
 })
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Commands
 - `:LocStatus` - Shows your current progress for today.
@@ -82,7 +81,7 @@ require('lualine').setup {
 }
 ```
 
-## 🎨 Highlighting (Heatmap)
+##  Highlighting (Heatmap)
 By default, the heatmap uses standard GitHub dark mode colors. If you want to customize them to match your theme, simply override these highlight groups in your config:
 ```lua
 vim.api.nvim_set_hl(0, "LocTrackerLevel0", { fg = "#2d333b" }) -- Empty
@@ -92,7 +91,7 @@ vim.api.nvim_set_hl(0, "LocTrackerLevel3", { fg = "#26a641" }) -- High
 vim.api.nvim_set_hl(0, "LocTrackerLevel4", { fg = "#39d353" }) -- Very High
 ```
 
-## 📝 Data Storage
+## Data Storage
 Data is saved locally as JSON. By default, it lives at `~/.local/share/nvim/loc-tracker.json`.
 The schema looks like this:
 ```json
@@ -102,5 +101,5 @@ The schema looks like this:
 }
 ```
 
-## 🤝 Contributing
+## Contributing
 Pull requests are welcome! Feel free to open issues for bugs or feature requests.
