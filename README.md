@@ -15,7 +15,7 @@ Install with your favorite package manager.
 **[lazy.nvim](https://github.com/folke/lazy.nvim):**
 ```lua
 {
-    "username/loc-tracker.nvim",
+    "matheusmurkdock/loc-tracker.nvim",
     config = function()
         require("loc-tracker").setup({
             daily_goal = 100, -- Set your daily goal (default is 100)
@@ -27,7 +27,7 @@ Install with your favorite package manager.
 **[packer.nvim](https://github.com/wbthomason/packer.nvim):**
 ```lua
 use {
-    "username/loc-tracker.nvim",
+    "matheusmurkdock/loc-tracker.nvim",
     config = function()
         require("loc-tracker").setup()
     end
